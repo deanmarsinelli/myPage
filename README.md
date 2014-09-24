@@ -1,0 +1,4 @@
+myPage
+======
+
+My example page.
