@@ -1,0 +1,142 @@
+/*
+  File: /~dmarsine/css/style.css
+
+  Author: Dean Marsinelli
+  Contact: marsinellid@gmail.com
+  Created on: September 10, 2014 
+  Updated on: October 22, 2014
+  This file contains the styling information for my GUI Programming I website.
+*/
+
+/* background color of the page and font family */
+body {
+  background-color: #b5a789;	/* light brown */
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* adds more room between lines of text */
+p {
+  line-height: 1.4em;
+}
+
+/* adds a drop cap effect to the first letter of assignment5 text */
+h3 + p.text:first-letter {
+  font-size: 3em;
+  float: left;
+  color: #954b4b;		/* maroon */
+  margin-right: 1px ;
+  margin-top: 0.20em ;
+}
+
+/* font size/color/ and family for headers */
+h1 {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 360%;
+  color: #efe5d0;  /* beige */
+}
+
+/* different color and size for poem title */
+h1.title {
+  font-size: 200%;
+  color: #675c47;   /* dark brown */
+}
+
+/* h2 and h3 styles below */
+h2 {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 120%;
+  color: #954b4b;		/* maroon */
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 90%;
+  color: black;
+}
+
+/* link color and hover effect */
+a:link, a:visited {
+  color: #b76666;
+  text-decoration: none;
+  border-bottom: thin dotted #b76666;
+}
+
+a:hover {
+  color: #675c47;
+  text-decoration: none;
+  border-bottom: thin dotted #675c47;
+}
+
+/* all content aligns the page to the center with a width of 800 pixels */
+#allcontent {
+  width: 800px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #675c47;  /* dark brown */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* the header for each page is centered */
+#header {
+  text-align: center;
+  background-color: #675c47;	/* dark brown */
+  height: 80px;
+}
+
+/* this styles the navigation bar on each page */
+nav {
+  text-align: center;
+  font-size: 110%;
+  background: #efe5d0;   /* beige */
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* side holds the picture of me on the home page */
+#picture {
+  float: right;
+  margin: 10px 20px 10px 60px;
+}
+
+/* main serves as the main content area */
+#main {
+  background: #efe5d0;  /* beige */
+  font-size: 105%;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  margin: 0px 10px 10px 10px;
+}
+
+/* about is used to correct the height of the text box on the main page */
+#about {
+  height: 360px;
+}
+
+/* rules for the list of assignments on the assignments page */
+ul {
+  line-height: 150%;
+}
+
+li.complete {
+  color: gray;
+}
+
+ul.changes {
+  font-size: 0.9em;
+}
+
+/* the footer on each page is currently just copyright information */
+#footer {
+  background-color: #675c47;	/* dark brown */
+  color: #efe5d0;  /* beige font */
+  text-align: center;
+  margin: 10px;
+  font-size: 90%;
+}
