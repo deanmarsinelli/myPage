@@ -9,7 +9,7 @@
 // when the document is ready, attach this event handler to
 // the submit event of form with id "frm"
 $(document).ready( function() {
-  $("#frm").submit(function () {
+  $("#frm").submit( function () {
     // clear any previous output
     $("#formOutput").html("");
     $("#errorMessage").html("");
