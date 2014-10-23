@@ -12,6 +12,7 @@
 body {
   background-color: #b5a789;	/* light brown */
   font-family: Georgia, "Times New Roman", Times, serif;
+  width: 100%;
 }
 
 /* adds more room between lines of text */
