@@ -100,7 +100,6 @@ function CreateNumberArray(start, end){
   and builds a multiplication table out of their products
 */
 function PrintTable(rowArray, colArray) {
-
   // first print the top row by itself
   var toprow = "<tr><td></td>";
   for (var k = 0, kk = colArray.length; k < kk; k++)
