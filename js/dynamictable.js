@@ -9,7 +9,7 @@
 // when the document is ready, attach this event handler to
 // the submit event of form with id "frm"
 $(document).ready( function() {
-  $("#frm").submit( function () {
+  $("#frm").submit(function () {
     // clear any previous output
     $("#formOutput").html("");
     $("#errorMessage").html("");
@@ -100,30 +100,26 @@ function CreateNumberArray(start, end){
   and builds a multiplication table out of their products
 */
 function PrintTable(rowArray, colArray) {
-  // first print the top row by itself
-  var toprow = "<tr><td></td>";
-  for (var k = 0, kk = colArray.length; k < kk; k++)
-  {
-    toprow += "<td class='topRow'>" + colArray[k] + "</td>";
-  }
-  toprow += "</tr>"
-  $("#formOutput").append(toprow);
-  
-  // now build the rest of the multiplication table by traversing each row
-  // and each column in each row, and multiplying the values from the corresponding arrays
-  for (var i = 0, ii = rowArray.length; i < ii; i++)
-  {
-    var rowContent = "<tr><td>" + rowArray[i] + "</td>";
-    for (var j = 0, jj = colArray.length; j < jj; j++)
-    {
-     rowContent += "<td>" + rowArray[i] * colArray[j] + "</td>";
-    }
-<<<<<<< HEAD
-}
-=======
-    rowContent += "</tr>";
-    $("#formOutput").append(rowContent);
-  }
-}
 
->>>>>>> e9923ee52fa1670a77dbdbf6f4576462327f8b43
+    // first print the top row by itself
+    var toprow = "<tr><td></td>";
+    for (var k = 0, kk = colArray.length; k < kk; k++)
+    {
+      toprow += "<td class='topRow'>" + colArray[k] + "</td>";
+    }
+    toprow += "</tr>"
+    $("#formOutput").append(toprow);
+    
+    // now build the rest of the multiplication table by traversing each row
+    // and each column in each row, and multiplying the values from the corresponding arrays
+    for (var i = 0, ii = rowArray.length; i < ii; i++)
+    {
+      var rowContent = "<tr><td>" + rowArray[i] + "</td>";
+      for (var j = 0, jj = colArray.length; j < jj; j++)
+      {
+       rowContent += "<td>" + rowArray[i] * colArray[j] + "</td>";
+      }
+      rowContent += "</tr>";
+      $("#formOutput").append(rowContent);
+    }
+}
