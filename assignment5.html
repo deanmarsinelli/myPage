@@ -1,106 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!--
-      File: /~dmarsine/assignment5.html
-      This file reads in text from a JSON file and displays it.
-      Author: Dean Marsinelli
-      Contact: marsinellid@gmail.com
-      Created on: October 4, 2014 
-    -->
-    
-    <!-- main css style sheet for my entire site -->
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    
-    <title>Dean Marsinelli - Assignment 5</title>
+<!--
+  File: /~dmarsine/assignment5.html
+  This file reads in text from a JSON file and displays it.
+  Author: Dean Marsinelli
+  Contact: marsinellid@gmail.com
+  Created on: October 4, 2014 
+  Updated on: October 31, 2014
+-->
 
-    <!-- 
-      load jQuery library from the Google Content Delivery Network (CDN)
-      see http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you/
-      however, note that you obviously must be online for this to work
-      alternatively, you can download jQuery and store it locally from
-      http://jquery.com/download/
-    -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/fadein.js"></script>
-    <!-- load JSON file containing the Tell-Tale Heart by Edgar Allen Poe. This code was written by Jesse Heines. -->
-    <script type="text/javascript">
-      var story;
-      
-      // load the json file as an object called story
-      jQuery.ajax({
-        async: false,
-        dataType: "json",
-        url: "telltale.json",
-        success: function(data) {
-          story = data;
-        }
-      });
-      
-      // when the json is finished loading, call function place content to place the text on the page
-      jQuery(document).ready( function() {
-        placeContent();
-      });
-    </script>
-    
-    <!-- script to place JSON text in the content div on this page. This code was written by Jesse Heines. -->
-    <script type="text/javascript">
-      function placeContent() {
-        var strContent = "";
-
-        // create dynamic content from JSON
-        strContent += "<h1 class='title'>" + story.title + "</h1>";
-        strContent += "<h2 class='author'>by " + story.author + "</h2>";
-        strContent += "<h3 class='date'>" + story.date + "</h3>";
-
-        // loop through all the paragraphs and sentences adding them to the strContent string
-        for (var para = 0; para < story.text.paragraphs.length; para++) {
-          strContent += "<p class='text'>";
-          for (var sent = 0; sent < story.text.paragraphs[para].length; sent++) {
-            strContent += story.text.paragraphs[para][sent] + "&nbsp; ";
-          }
-          strContent += "</p>";
-        }
-
-        // place dynamic content on page
-        jQuery("#content").html(strContent);
-      }
-    </script>
-    
-  </head>
-  <body>
-    <!-- all content div is used to center align the page in the browser window -->
-    <div id="allcontent">
-	
-      <div id="header">
-        <h1>Assignment 5: Dynamic Text</h1>
-      </div> <!-- end of header div -->
-    
-      <!-- navigation contains links to other pages -->
-      <nav>
-        <p>
-          <a href="index.html" title="Home">Home</a> | 
-          <a href="assignments.html" title="Assignments">Assignments</a> |    
-          <a href="mailto:marsinelli@gmail.com" title="Email Me">Email me</a> | 
-          <a href="https://www.linkedin.com/in/deanmarsinelli" title="My LinkedIn">LinkedIn</a>
-        </p>
-      </nav> <!-- end of navigation -->
-      
-      <!-- main content for the page -->
-      <div id="main">
-      
-        <!-- dynamic content loaded from JSON -->
-        <div id="content"></div>
-        
-      </div> <!-- end of main div -->
-      
-      <div id="footer">
-        <p>
-          Copyright &copy; 2014 by Dean Marsinelli. All rights reserved.
-        </p>
-      </div> <!-- end of footer div -->
-      
-    </div> <!-- end of allcontent div -->
-  </body>
-</html>
+<!-- load JSON file containing the Tell-Tale Heart by Edgar Allen Poe. -->
+<script src="js/assignment5.js"></script>

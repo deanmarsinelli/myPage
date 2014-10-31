@@ -123,4 +123,3 @@ function PrintTable(rowArray, colArray) {
       $("#formOutput").append(rowContent);
     }
 }
-

@@ -1,113 +1,63 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!--
-      File: /~dmarsine/assignment6.html
-      This file is for assignment 6 which prints out a multiplication table.
-      Author: Dean Marsinelli
-      Contact: marsinellid@gmail.com
-      Created on: October 22, 2014 -->
-		
-    <!-- main stylesheet for the page -->
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    <!-- styles the dynamic table -->
-    <link type="text/css" rel="stylesheet" href="css/table.css">
-		
-    <title>Dean Marsinelli - Assignment 6</title>
-    <!-- google hosted jQuery -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    
-    <!-- script to fade in the page content -->
-    <script src="js/fadein.js"></script>
-    <!-- script to create the dynamic table -->
-    <script src="js/dynamictable.js"></script>
-  </head>
-	
-  <body>
-    <!-- all content div is used to center align the page in the browser window -->
-    <div id="allcontent">
-	
-      <div id="header">
-        <h1>Assignment 6: Dynamic Table</h1>
-      </div> <!-- end of header div -->
-    
-      <!-- navigation contains links to other pages -->
-      <nav>
-        <p>
-          <a href="index.html" title="Home">Home</a> | 
-          <a href="assignments.html" title="Assignments">Assignments</a> |    
-          <a href="mailto:marsinelli@gmail.com" title="Email Me">Email me</a> | 
-          <a href="https://www.linkedin.com/in/deanmarsinelli" title="My LinkedIn">LinkedIn</a>
-        </p>
-      </nav> <!-- end of navigation -->
-      
-      <!-- main content for the page -->
-      <div id="main">
-        <h2>Multiplication Table Creator</h2>
-        <p>
-          Please fill out the form below with whole numbers to create a multiplication table.
-        </p>
-        <!-- left div contains the text for the form -->
-        <div id="left">
-          <p>
-            Row Start: 
-          </p>
-          <p>
-            Row End: 
-          </p>
-          <p>
-            Column Start: 
-          </p>
-          <p>
-            Column End: 
-          </p>
-        </div> <!-- end of left div -->
-        
-        <!-- right div contains the input fields for the form -->
-        <div id="right">
-          <!-- 
-            Form that will not reload the page when submitted.
-            Each value submitted will be used in the javascript to
-            create the multiplication table . The error span is where an
-            asterisk will be placed if the user enters invalid input.
-          -->
-          <form id="frm" action="javascript:void(0)">
-            <p>
-              <input type="text" id="rowStart" name="rowEnd"><span id="error1"></span>
-            </p>
-            <p>
-              <input type="text" id="rowEnd" name="rowEnd"><span id="error2"></span>
-            </p>
-            <p>
-              <input type="text" id="colStart" name="colStart"><span id="error3"></span> 
-            </p>
-            <p>
-              <input type="text" id="colEnd" name="colEnd"><span id="error4"></span>
-            </p>
-              <input type="submit">
-          </form>
-        </div> <!-- end of right div -->
-        
-        <!-- table div is where the dynamic table will be created -->
-        <div id="table">
-          <table>
-            <tbody id="formOutput">
-            <!-- dynamic content will be placed here -->
-            </tbody>
-          </table>
-          <p id="errorMessage"></p>
-        </div> <!-- end of table div -->
-        
-      </div> <!-- end of main div -->
-      
-      <div id="footer">
-        <p>
-          Copyright &copy; 2014 by Dean Marsinelli. All rights reserved.
-        </p>
-      </div> <!-- end of footer div -->
-      
-    </div> <!-- end of allcontent div -->
-  </body>
-</html>
-		
+<!--
+  File: /~dmarsine/assignment6.html
+  This file is for assignment 6 which prints out a multiplication table.
+  Author: Dean Marsinelli
+  Contact: marsinellid@gmail.com
+  Created on: October 22, 2014 
+  Updated on: October 31, 2014
+-->
+<script src="js/dynamictable.js"></script>
+<h2>Multiplication Table Creator</h2>
+<p>
+  Please fill out the form below with whole numbers to create a multiplication table.
+</p>
+<!-- left div contains the text for the form -->
+<div id="left">
+  <p>
+    Row Start 
+  </p>
+  <p>
+    Row End 
+  </p>
+  <p>
+    Column Start 
+  </p>
+  <p>
+    Column End 
+  </p>
+</div> <!-- end of left div -->
+
+<!-- right div contains the input fields for the form -->
+<div id="right">
+  <!-- 
+    Form that will not reload the page when submitted.
+    Each value submitted will be used in the javascript to
+    create the multiplication table . The error span is where an
+    asterisk will be placed if the user enters invalid input.
+  -->
+  <form id="frm" action="javascript:void(0)">
+    <p>
+      <input type="text" id="rowStart" name="rowEnd"><span id="error1"></span>
+    </p>
+    <p>
+      <input type="text" id="rowEnd" name="rowEnd"><span id="error2"></span>
+    </p>
+    <p>
+      <input type="text" id="colStart" name="colStart"><span id="error3"></span> 
+    </p>
+    <p>
+      <input type="text" id="colEnd" name="colEnd"><span id="error4"></span>
+    </p>
+    <input type="submit">
+  </form>
+</div> <!-- end of right div -->
+
+<!-- table div is where the dynamic table will be created -->
+<div id="table">
+  <table>
+    <tbody id="formOutput">
+    <!-- dynamic content will be placed here -->
+    </tbody>
+  </table>
+  <p id="errorMessage"></p>
+</div> <!-- end of table div -->

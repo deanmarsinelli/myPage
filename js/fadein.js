@@ -6,6 +6,6 @@
   Created on: October 20, 2014 
 */
 
-$(document).ready( function() {
-  $("#allcontent").hide().fadeIn(500);
-});
+function fadeIn() {
+  $("#main").hide().fadeIn(400);
+}
