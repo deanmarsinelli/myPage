@@ -1,7 +1,3 @@
-myPage
-=======
+Welcome to my Homepage. 
 
-My example page.
-
-
-Edit 2 from the web browser.
+This site is used to host my GUI Programming I assignments.
