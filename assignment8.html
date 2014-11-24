@@ -1,0 +1,67 @@
+<!--
+  File: /~dmarsine/assignment8.html
+  This file is for assignment 8 which prints out a 
+  multiplication table in tabs and validates input.
+  Author: Dean Marsinelli
+  Contact: marsinellid@gmail.com
+  Created on: November 22, 2014 
+-->
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+<script src="js/dynamictabs.js"></script>
+<h2>Multiplication Table Creator</h2>
+<p>
+  Please fill out the form below with whole numbers to create a multiplication table.
+</p>
+<!-- left div contains the text for the form -->
+<div id="left">
+  <p>
+    Row Start 
+  </p>
+  <p>
+    Row End 
+  </p>
+  <p>
+    Column Start 
+  </p>
+  <p>
+    Column End 
+  </p>
+</div> <!-- end of left div -->
+
+<!-- right div contains the input fields for the form -->
+<div id="right">
+  <!-- 
+    Form that will not reload the page when submitted.
+    Each value submitted will be used in the javascript to
+    create the multiplication table . The error span is where an
+    asterisk will be placed if the user enters invalid input.
+  -->
+  <form id="frm" action="javascript:void(0)">
+    <p>
+      <input type="text" id="rowStart" name="rowStart"><span id="rowStartError"></span>
+    </p>
+    <p>
+      <input type="text" id="rowEnd" name="rowEnd"><span id="rowEndError"></span>
+    </p>
+    <p>
+      <input type="text" id="colStart" name="colStart"><span id="colStartError"></span>
+    </p>
+    <p>
+      <input type="text" id="colEnd" name="colEnd"><span id="colEndError"></span>
+    </p>
+    <p id="sub">
+      <input type="submit">
+    </p>
+  </form>
+  <p id="clear">
+    <button id="clearButton">Clear All Tabs</button>
+  </p>
+</div> <!-- end of right div -->
+
+<!-- this is where the jQuery UI Tabs will start -->
+<div id="myTabs">
+  <ul>
+    <!-- tab content will be placed in here -->
+  </ul>
+</div> <!-- end of myTabs div -->

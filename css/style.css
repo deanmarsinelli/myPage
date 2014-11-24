@@ -4,7 +4,7 @@
   Author: Dean Marsinelli
   Contact: marsinellid@gmail.com
   Created on: September 10, 2014 
-  Updated on: October 22, 2014
+  Updated on: November 24, 2014
   This file contains the styling information for my GUI Programming I website.
 */
 
@@ -60,12 +60,19 @@ h3 {
 a:link, a:visited {
   color: #b76666;
   text-decoration: none;
-  border-bottom: thin dotted #b76666;
+
 }
 
 a:hover {
   color: #675c47;
   text-decoration: none;
+}
+
+nav a:link, a:visited {
+  border-bottom: thin dotted #b76666;
+}
+
+nav a:hover {
   border-bottom: thin dotted #675c47;
 }
 
